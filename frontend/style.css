@@ -1,0 +1,201 @@
+/* =========================================
+   1. VARIÁVEIS E CONFIGURAÇÕES GLOBAIS
+   ========================================= */
+:root {
+    --verde-primario: #008f51; /* Cor principal da marca */
+    --verde-fundo: #f4faf6;    /* Fundo suave da página */
+    --texto-escuro: #1f2937;
+    --texto-claro: #6b7280;
+    --borda-clara: #e5e7eb;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--verde-fundo);
+    color: var(--texto-escuro);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================================
+   2. CABEÇALHO E LOGO
+   ========================================= */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo-principal {
+    width: 250px; /* Ajuste feito por você */
+    height: auto;
+    margin-bottom: 4px;
+}
+
+.header p {
+    color: var(--texto-claro);
+    font-size: 14px;
+}
+
+/* =========================================
+   3. CARD DE RESTRIÇÕES (FILTROS)
+   ========================================= */
+.card {
+    background: #ffffff;
+    border: 1px solid var(--borda-clara);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    font-size: 16px;
+    margin: 0 0 5px 0;
+}
+
+.subtitle {
+    font-size: 13px;
+    color: var(--texto-claro);
+    margin-bottom: 20px;
+}
+
+/* Grid de Checkboxes com 3 colunas */
+.grid-restricoes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* =========================================
+   4. ÁREA DE BUSCA (INPUTS E BOTÕES)
+   ========================================= */
+.toggle-busca {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.toggle-btn {
+    padding: 8px 16px;
+    border: 1px solid var(--borda-clara);
+    background-color: #ffffff;
+    color: var(--texto-escuro);
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.toggle-btn.ativo {
+    background-color: var(--verde-primario);
+    color: white;
+    border-color: var(--verde-primario);
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+#codigoInput {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid var(--borda-clara);
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+#codigoInput:focus {
+    border-color: var(--verde-primario);
+}
+
+.btn-buscar {
+    background-color: var(--verde-primario);
+    color: white;
+    border: none;
+    padding: 0 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-buscar:hover {
+    background-color: #00703e;
+}
+
+/* =========================================
+   5. ÁREA DE RESULTADOS
+   ========================================= */
+.resultado-area {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =========================================
+   6. RODAPÉ (FOOTER)
+   ========================================= */
+.footer {
+    text-align: center;
+    margin-top: auto; /* Empurra o rodapé para o final */
+    padding-top: 40px;
+    font-size: 12px;
+    color: var(--texto-claro);
+}
+
+.footer a {
+    color: var(--texto-claro);
+    text-decoration: underline;
+}
+
+/* =========================================
+   7. RESPONSIVIDADE (MOBILE)
+   ========================================= */
+@media (max-width: 600px) {
+    /* Deixa as opções em 2 colunas para tablets pequenos/celulares deitados */
+    .grid-restricoes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Coloca o botão buscar embaixo da barra de texto */
+    .input-group {
+        flex-direction: column;
+    }
+    
+    .btn-buscar {
+        padding: 15px; /* Aumenta a área de toque no celular */
+    }
+}
+
+@media (max-width: 400px) {
+    /* Deixa as opções em 1 coluna (lista em pé) para celulares pequenos */
+    .grid-restricoes {
+        grid-template-columns: 1fr;
+    }
+}

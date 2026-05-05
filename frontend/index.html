@@ -3,16 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scanner de Restrições</title>
+    <title>NutriCheck - Verificação de Alimentos</title>
+    
+    <link rel="icon" type="image/png" href="img/ico.png?v=3">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Scanner Guardião</h1>
-    
-    <input type="text" id="codigoInput" placeholder="Digite o nome do alimento (ex: Nutella, Bis)">
-    <button id="buscarBtn">Buscar</button>
+    <div class="container">
+        <header class="header">
+            <img src="img/ico.png" alt="Logotipo NutriCheck" class="logo-principal">            
+            <p>Busque alimentos e descubra na hora se contêm ingredientes que você precisa evitar.</p>
+        </header>
 
-    <div id="resultado" style="margin-top: 20px;"></div>
-    
+        <section class="card restricoes-card">
+            <h2>Minhas restrições alimentares</h2>
+            <p class="subtitle">Marque o que você precisa evitar. Os produtos com esses ingredientes serão destacados.</p>
+            
+            <div class="grid-restricoes">
+                <label class="checkbox-container"><input type="checkbox" value="en:milk"> Lactose / Leite</label>
+                <label class="checkbox-container"><input type="checkbox" value="en:gluten"> Glúten</label>
+                <label class="checkbox-container"><input type="checkbox" value="en:peanuts"> Amendoim</label>
+                <label class="checkbox-container"><input type="checkbox" value="en:nuts"> Nozes / Castanhas</label>
+                <label class="checkbox-container"><input type="checkbox" value="en:soybeans"> Soja</label>
+                <label class="checkbox-container"><input type="checkbox" value="en:eggs"> Ovo</label>
+                <label class="checkbox-container"><input type="checkbox" value="en:fish"> Peixe</label>
+                <label class="checkbox-container"><input type="checkbox" value="en:crustaceans"> Crustáceos</label>
+                <label class="checkbox-container"><input type="checkbox" value="en:sesame-seeds"> Gergelim</label>
+            </div>
+        </section>
+
+        <section class="busca-section">
+            <div class="toggle-busca">
+                <button id="btnNome" class="toggle-btn ativo">🔍 Nome</button>
+                <button id="btnCodigo" class="toggle-btn">|||| Código de barras</button>
+            </div>
+            
+            <div class="input-group">
+                <input type="text" id="codigoInput" placeholder="Ex: biscoito recheado">
+                <button id="buscarBtn" class="btn-buscar">Buscar</button>
+            </div>
+        </section>
+
+        <div id="resultado" class="resultado-area"></div>
+
+        <footer class="footer">
+            <p>Dados fornecidos por <a href="https://world.openfoodfacts.org/" target="_blank">Open Food Facts</a></p>
+        </footer>
+    </div>
+
     <script src="app.js"></script>
 </body>
 </html>
