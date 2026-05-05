@@ -12,32 +12,32 @@ def buscar_produto():
     if not termo:
         return jsonify({"erro": "Nenhum alimento informado"}), 400
 
-    # Usando o servidor global para testar se o BR está instável
-    url = f"https://world.openfoodfacts.org/cgi/search.pl?search_terms={termo}&search_simple=1&action=process&json=1"
+    # 🚀 O SEGREDO: Usando a API V2 oficial, que não bloqueia aplicações!
+    url = f"https://world.openfoodfacts.org/api/v2/search?search_terms={termo}"
     
     headers = {
-        "User-Agent": "ScannerGuardiao/1.0 (contato: seuemail@exemplo.com)"
+        "User-Agent": "NutriCheckApp/1.0 - Projeto Academico"
     }
     
     try:
-        print(f"🔍 Tentando buscar: {termo}")
-        resposta = requests.get(url, headers=headers, timeout=10)
+        print(f"🔍 Tentando buscar na API V2: {termo}")
+        resposta = requests.get(url, headers=headers, timeout=15)
         
-        # Imprime o código de status no terminal (ex: 200, 403, 500)
         print(f"📡 Status da API: {resposta.status_code}")
         
+        if resposta.status_code != 200:
+            return jsonify({"erro": "A base de dados oficial está indisponível no momento."}), 503
+            
         dados = resposta.json()
         
-        # Verifica se a API retornou produtos
-        if 'products' in dados:
+        if 'products' in dados and len(dados['products']) > 0:
             print(f"✅ Encontrados {len(dados['products'])} produtos.")
             return jsonify(dados)
         else:
-            print("⚠️ API respondeu, mas não encontrou a chave 'products'.")
+            print("⚠️ API respondeu, mas não encontrou produtos.")
             return jsonify({"products": []})
             
     except Exception as e:
-        # ISSO AQUI VAI NOS DAR A RESPOSTA DEFINITIVA NO TERMINAL
         print("❌ ERRO NO SERVIDOR:")
         print(str(e))
         return jsonify({"erro": str(e)}), 500
