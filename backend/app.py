@@ -48,8 +48,9 @@ def cadastrar():
         return jsonify({"erro": "Campos obrigatórios em falta."}), 400
     if senha != confirm: 
         return jsonify({"erro": "As senhas não coincidem."}), 400
-    if len(senha) < 6: 
-        return jsonify({"erro": "Senha muito curta."}), 400
+    # AQUI ESTÁ A ATUALIZAÇÃO PARA 8 CARACTERES!
+    if len(senha) < 8: 
+        return jsonify({"erro": "A senha deve ter pelo menos 8 caracteres."}), 400
 
     try:
         # Garantindo que as restrições sejam uma lista antes do JSON Dumps
@@ -114,7 +115,7 @@ def gerenciar_perfil():
         u = query_db("SELECT id, nome, email, restricoes FROM usuarios WHERE id = ?", (uid,), one=True)
         return jsonify({"id": u['id'], "nome": u['nome'], "restricoes": json.loads(u['restricoes'])})
     
-    restricoes_lista = request.json.get('restricoes', [])
+    restricoes_lista = (request.json or {}).get('restricoes', [])
     if not isinstance(restricoes_lista, list):
         restricoes_lista = []
         
