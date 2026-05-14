@@ -192,7 +192,7 @@ def abastecer():
         ('7898000000007', 'Azeite Extra Virgem Borges', 'Azeite de oliva extravirgem.', '', ''),
         ('7898000000008', 'Margarina Qualy', 'Óleos vegetais, leite desnatado, emulsificantes.', 'en:milk, en:soybeans', ''),
         ('7898000000009', 'Margarina Becel', 'Óleos vegetais líquidos e interesterificados.', 'en:soybeans', ''),
-        ('7898000000010', 'Açúcar Cristal Caravelas', 'Açúcar cristal.', '', ''),
+        ('789800000010', 'Açúcar Cristal Caravelas', 'Açúcar cristal.', '', ''),
         ('7898000000011', 'Açúcar Refinado União', 'Açúcar refinado.', '', ''),
         ('7898000000012', 'Açúcar Mascavo Native', 'Açúcar mascavo.', '', ''),
         ('7898000000013', 'Açúcar Demerara', 'Açúcar demerara.', '', ''),
@@ -534,8 +534,40 @@ def abastecer():
         ('7891700000008', 'Atum Fresco Congelado', 'Postas de atum.', 'en:fish', ''),
 
         # ==========================================
-        # 🥩 CARNES ESPECIAIS E FRIOS
+        # 🥩 CARNES ESPECIAIS, FRIOS E CHURRASCO
         # ==========================================
+        ('7890200000001', 'Presunto Cozido Sadia', 'Carne suína, água, sal, proteína de soja.', 'en:soybeans', ''),
+        ('7890200000002', 'Mortadela Bologna Perdigão', 'Carnes, gordura suína, água, proteína de soja.', 'en:soybeans', ''),
+        ('7890200000003', 'Salsicha Hot Dog Sadia', 'Carne de ave, carne suína, proteína de soja.', 'en:soybeans', ''),
+        ('7890200000004', 'Linguiça Calabresa Perdigão', 'Carne suína, carne mecanicamente separada, soja.', 'en:soybeans', ''),
+        ('7890200000005', 'Linguiça Toscana Seara', 'Carne suína, água, sal, especiarias.', '', ''),
+        ('7890200000006', 'Peito de Peru Defumado Sadia', 'Peito de peru, água, sal, proteína de soja.', 'en:soybeans', ''),
+        ('7890200000007', 'Salame Milano Sadia', 'Carne suína, toucinho, sal, leite em pó.', 'en:milk', ''),
+        ('7890200000008', 'Pepperoni Seara', 'Carne suína, carne bovina, especiarias.', '', ''),
+        ('7890200000009', 'Bacon em Fatias Sadia', 'Barriga suína, sal, conservantes.', '', ''),
+        ('7890200000010', 'Frango Inteiro Congelado Sadia', 'Cortes de frango.', '', ''),
+        ('7890200000011', 'Coxa e Sobrecoxa Congelada Perdigão', 'Cortes de frango.', '', ''),
+        ('7890200000012', 'Filé de Frango Congelado Seara', 'Peito de frango desossado.', '', ''),
+        ('7890200000013', 'Hambúrguer Bovino Friboi', 'Carne bovina, água, gordura, proteína de soja.', 'en:soybeans', ''),
+        ('7890200000014', 'Nuggets de Frango Sadia', 'Carne de frango, farinha de trigo, óleo, soja.', 'en:gluten, en:soybeans', ''),
+        ('7890200000015', 'Almôndega de Carne Seara', 'Carne bovina, carne de ave, farinha de trigo, soja.', 'en:gluten, en:soybeans', ''),
+        ('7890200000016', 'Carne Bovina Moída Congelada', 'Carne bovina.', '', ''),
+        ('7890200000017', 'Costela Suína Congelada', 'Costela suína.', '', ''),
+        ('7890200000018', 'Queijo Brie', 'Leite pasteurizado, fermento lácteo, mofo branco.', 'en:milk', ''),
+        ('7890200000019', 'Queijo Gouda', 'Leite pasteurizado, sal, coalho, corante natural.', 'en:milk', ''),
+        ('7890200000020', 'Queijo Cheddar Fatiado', 'Leite pasteurizado, sal, coalho, corante natural.', 'en:milk', ''),
+        ('7890200000021', 'Queijo Provolone', 'Leite pasteurizado, sal, coalho, defumação.', 'en:milk', ''),
+        ('7890200000022', 'Queijo Ricota', 'Soro de leite, leite pasteurizado.', 'en:milk', ''),
+        ('7890200000023', 'Queijo Cottage', 'Leite desnatado pasteurizado, creme de leite, sal.', 'en:milk', ''),
+        ('7890200000024', 'Iogurte Grego Zero', 'Leite desnatado, fermento lácteo, edulcorantes.', 'en:milk', ''),
+        ('7890200000025', 'Petit Suisse de Morango', 'Leite, açúcar, preparado de morango.', 'en:milk', ''),
+        ('7890200000026', 'Bebida Láctea Fermentada Yakult', 'Leite desnatado, açúcar, lactobacilos vivos.', 'en:milk', ''),
+        ('7890200000027', 'Manteiga Ghee', 'Manteiga clarificada.', 'en:milk', ''),
+        ('7890200000028', 'Nata Fresca', 'Creme de leite pasteurizado.', 'en:milk', ''),
+        ('7890200000029', 'Creme Duplo de Leite', 'Creme de leite com alto teor de gordura.', 'en:milk', ''),
+        ('7890200000030', 'Muçarela de Búfala', 'Leite de búfala pasteurizado, sal, coalho.', 'en:milk', ''),
+        ('7890200000031', 'Iogurte Natural sem Lactose', 'Leite integral, enzima lactase, fermento lácteo.', 'en:milk', ''),
+        ('7890200000032', 'Linguiça Apimentada', 'Carne suína, pimenta calabresa, sal, especiarias.', '', ''),
         ('7891800000001', 'Peito de Frango sem Osso', 'Cortes de peito de frango.', '', ''),
         ('7891800000002', 'Filé de Frango Temperado', 'Peito de frango, água, sal, condimentos.', '', ''),
         ('7891800000003', 'Contrafilé Bovino', 'Contrafilé bovino in natura.', '', ''),
@@ -547,9 +579,16 @@ def abastecer():
         ('7891800000009', 'Fraldinha Bovina', 'Fraldinha bovina in natura.', '', ''),
         ('7891800000010', 'Cordeiro Congelado', 'Cortes de cordeiro.', '', ''),
         ('7891800000011', 'Carne de Pato Congelada', 'Cortes de pato.', '', ''),
+        ('7891800000012', 'Coração de Frango', 'Coração de frango.', '', ''),
+        ('7891800000013', 'Maminha Bovina', 'Maminha bovina in natura.', '', ''),
+        ('7891800000014', 'Cupim Bovino', 'Cupim bovino in natura.', '', ''),
+        ('7894000000021', 'Queijo Coalho no Espeto', 'Leite pasteurizado, sal, coalho.', 'en:milk', ''),
+        ('7899000000038', 'Sal de Parrilla com Chimichurri', 'Sal entrefino, ervas desidratadas, alho, pimenta.', '', ''),
+        ('7890500000012', 'Pão de Alho Tradicional', 'Farinha de trigo, margarina, alho, queijo parmesão, salsa.', 'en:gluten, en:milk, en:soybeans', ''),
+        ('7890500000013', 'Pão de Alho Apimentado', 'Farinha de trigo, margarina, alho, pimenta calabresa.', 'en:gluten, en:milk, en:soybeans', ''),
 
         # ==========================================
-        # 🍩 SOBREMESAS INDUSTRIAIS E CAFÉ
+        # 🍩 SOBREMESAS INDUSTRIAIS E DOCES
         # ==========================================
         ('7891900000001', 'Brownie Bauducco', 'Açúcar, ovos, farinha de trigo, cacau.', 'en:gluten, en:eggs, en:soybeans', ''),
         ('7891900000002', 'Churros Congelado', 'Farinha de trigo, água, margarina.', 'en:gluten, en:soybeans', ''),
@@ -610,7 +649,24 @@ def abastecer():
         ('7892200000009', 'Chocolate Diet', 'Massa de cacau, edulcorantes, leite em pó.', 'en:milk, en:soybeans', ''),
         ('7892200000010', 'Refrigerante Zero Açúcar Coca-Cola', 'Água gaseificada, extrato de noz de cola, edulcorantes.', '', ''),
         ('7892200000011', 'Refrigerante Zero Pepsi', 'Água gaseificada, extrato de cola, edulcorantes.', '', ''),
-        ('7892200000012', 'Biscoito Integral', 'Farinha de trigo integral, aveia, açúcar mascavo.', 'en:gluten', '')
+        ('7892200000012', 'Biscoito Integral', 'Farinha de trigo integral, aveia, açúcar mascavo.', 'en:gluten', ''),
+        
+        # ==========================================
+        # 💪 SUPLEMENTOS E NUTRIÇÃO ESPORTIVA
+        # ==========================================
+        ('7891400000015', 'Creatina Monohidratada', 'Creatina monohidratada em pó pura.', '', ''),
+        ('7891400000016', 'Pré-Treino Frutas Vermelhas', 'Taurina, cafeína, isomaltulose, aromatizante.', '', ''),
+        ('7891400000017', 'Whey Protein Isolado', 'Proteína isolada do soro do leite, sucralose.', 'en:milk, en:soybeans', ''),
+        ('7891400000018', 'Pasta de Amendoim com Whey', 'Amendoim torrado, proteína do soro do leite, cacau.', 'en:peanuts, en:milk, en:soybeans', ''),
+        ('7891400000019', 'Gel de Carboidrato Laranja', 'Maltodextrina, frutose, sódio.', '', ''),
+        ('7891300000013', 'Bebida Proteica Yopro', 'Leite desnatado, proteína do soro do leite, cacau.', 'en:milk', ''),
+
+        # ==========================================
+        # 🌱 VEGANO E PLANT-BASED
+        # ==========================================
+        ('7892300000001', 'Hambúrguer de Plantas (Plant-Based)', 'Água, proteína de soja, gordura vegetal, extrato de beterraba.', 'en:soybeans', ''),
+        ('7892300000002', 'Maionese Vegana', 'Água, óleo de girassol, amido modificado, vinagre.', '', ''),
+        ('7892300000003', 'Queijo Mussarela Vegano', 'Água, amido de batata, óleo de coco, sal.', '', '')
     ]
 
     cursor.executemany('''
