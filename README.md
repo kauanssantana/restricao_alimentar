@@ -19,6 +19,8 @@ O **NutriCheck** é uma aplicação web Full-Stack desenvolvida para ajudar pess
 
 O sistema integra-se à API global do [Open Food Facts](https://br.openfoodfacts.org/) para buscar dados de milhares de produtos. Além disso, a aplicação possui um back-end robusto focado em **Segurança da Informação e Governança de TI (Adequação LGPD)**, garantindo a proteção e o direito de exclusão dos dados dos usuários. Tudo envelopado numa interface moderna com *Glassmorphism* e 100% responsiva (Mobile-First).
 
+<img width="1600" height="787" alt="img" src="https://github.com/user-attachments/assets/db19e86d-c573-4280-bd28-2aba9add0196" />
+
 ---
 
 ## ✨ Principais Funcionalidades
