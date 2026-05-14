@@ -71,7 +71,9 @@ O projeto foi dividido em duas camadas, utilizando as melhores práticas de dese
       ```bash
       python app.py
 
-5. Abra o arquivo index.html no seu navegador web preferido e comece a usar!
+5. Abra o index.html usando o Live Server do VS Code 
+   (botão direito → "Open with Live Server") para garantir
+   que a autenticação funcione corretamente.
 
 
 ---
