@@ -10,7 +10,7 @@ const formLogin    = document.getElementById('formLogin'), formCadastro = docume
 // ✅ onclick padrão definido IMEDIATAMENTE — antes de qualquer função async
 abrirModalBtn.onclick = () => modal.style.display = 'flex';
 
-const API = 'http://127.0.0.1:5000';
+const API = 'https://nutricheck-api-2p3a.onrender.com';
 let usuarioAtual   = null;
 let tipoBuscaAtual = 'nome';
 
