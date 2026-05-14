@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify, session
 from flask_cors import CORS
 from werkzeug.security import generate_password_hash, check_password_hash
-import sqlite3, requests, json
+import sqlite3, requests, json, os
 
 app = Flask(__name__)
 app.secret_key = "nutricheck_secret_2026"
@@ -281,4 +281,4 @@ def buscar():
 
 if __name__ == '__main__':
     init_db()
-    app.run(debug=True, port=5000)
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
