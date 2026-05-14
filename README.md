@@ -21,6 +21,9 @@ O sistema integra-se à API global do [Open Food Facts](https://br.openfoodfacts
 
 <img width="1600" height="787" alt="img" src="https://github.com/user-attachments/assets/db19e86d-c573-4280-bd28-2aba9add0196" />
 
+<img width="1600" height="797" alt="img1" src="https://github.com/user-attachments/assets/a5af1240-55f7-4103-b6be-088e58f8bc5f" />
+
+
 ---
 
 ## ✨ Principais Funcionalidades
