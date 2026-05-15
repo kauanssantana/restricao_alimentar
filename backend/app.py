@@ -265,7 +265,20 @@ def buscar():
         url  = f"https://br.openfoodfacts.org/api/v2/product/{termo}" if tipo == 'codigo' else \
                f"https://br.openfoodfacts.org/api/v2/search?search_terms={termo.replace(' ', '%20')}"
         r    = requests.get(url, headers={"User-Agent": "NutriCheck/1.0"}, timeout=10).json()
-        prod = r.get('product') if tipo == 'codigo' else (r.get('products', [{}])[0])
+        
+        if tipo == 'codigo':
+            prod = r.get('product')
+        else:
+            produtos_encontrados = r.get('products', [])
+            prod = None
+            termo_lower = termo.lower()
+            for p in produtos_encontrados:
+                nome_p = str(p.get('product_name', '')).lower()
+                marca_p = str(p.get('brands', '')).lower()
+                # Só aceita se o termo aparecer no nome ou na marca
+                if termo_lower in nome_p or termo_lower in marca_p:
+                    prod = p
+                    break
 
         if prod and prod.get('product_name'):
             tags = prod.get('allergens_tags', [])

@@ -330,7 +330,15 @@ function formatarData(dataStr) {
 // ==========================================
 function renderizarProdutoNaTela(dados) {
     if (!dados.products || dados.products.length === 0) {
-        return resultadoDiv.innerHTML = '<p style="color:#ef4444;text-align:center;font-weight:bold;">❌ Nenhum produto encontrado com este nome exato.</p>';
+        return resultadoDiv.innerHTML = `
+    <div style="background:rgba(255,255,255,0.85);backdrop-filter:blur(10px);border-radius:16px;padding:24px;max-width:800px;width:100%;text-align:center;">
+        <p style="font-size:22px;margin-bottom:8px;">😕</p>
+        <p style="font-weight:700;font-size:16px;margin-bottom:8px;">Produto não encontrado na nossa base de dados.</p>
+        <p style="font-size:14px;color:#6b7280;margin-bottom:16px;">Tente verificar a ortografia ou buscar por um nome diferente.</p>
+        <hr style="border:none;border-top:1px solid #e5e7eb;margin-bottom:16px;">
+        <p style="font-size:13px;color:#6b7280;">Quer que esse produto seja adicionado?<br>
+        Entre em contato: <a href="mailto:santanakauan773@gmail.com" style="color:#008f51;font-weight:600;">santanakauan773@gmail.com</a></p>
+    </div>`;
     }
 
     const produto      = dados.products[0];
