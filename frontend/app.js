@@ -94,7 +94,8 @@ function atualizarBotaoLogin() {
 
 async function verificarSessao() {
     try {
-        const res = await fetch(`${API}/api/perfil`, { credentials: 'include' });
+        const res = await fetch(`${API}/api/perfil`, { 
+            credentials: 'include' });
         if (res.ok) { usuarioAtual = await res.json(); atualizarBotaoLogin(); }
     } catch (e) {}
 }

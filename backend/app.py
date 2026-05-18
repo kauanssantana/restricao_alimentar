@@ -5,7 +5,18 @@ import sqlite3, requests, json, os
 
 app = Flask(__name__)
 app.secret_key = "nutricheck_secret_2026"
-CORS(app, supports_credentials=True)
+
+# Configurações de segurança para Cookies Cross-Site (Netlify <-> Render)
+app.config['SESSION_COOKIE_SAMESITE'] = 'None'
+app.config['SESSION_COOKIE_SECURE'] = True
+
+# Permissão explícita para o seu Front-end no Netlify e para testes locais
+CORS(app, supports_credentials=True, origins=[
+    "https://nutricheck-app.netlify.app", 
+    "http://localhost:5500", 
+    "http://127.0.0.1:5500"
+])
+
 DB_PATH = 'nutricheck.db'
 
 # --- UTILITÁRIOS DE BANCO DE DADOS ---
